@@ -1,28 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero/Hero';
-import Features from './components/Features';
-import Classes from './components/Classes/Classes';
-import Pricing from './components/Pricing/Pricing';
-import Team from './components/Team/Team';
-import Gallery from './components/Gallery/Gallery';
-import BookingForm from './components/Booking/BookingForm';
+import Home from './pages/Home';
+import ChallengePage from './pages/ChallengePage';
+import GymPage from './pages/GymPage';
+import SuccessStoriesPage from './pages/SuccessStoriesPage';
+import AboutPage from './pages/AboutPage';
 import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="bg-black min-h-screen">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Classes />
-      <Pricing />
-      <Team />
-      <Gallery />
-      <BookingForm />
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-black min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/challenge" element={<ChallengePage />} />
+          <Route path="/gym" element={<GymPage />} />
+          <Route path="/success-stories" element={<SuccessStoriesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
-export default App;
+export default App

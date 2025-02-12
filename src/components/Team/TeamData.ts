@@ -1,9 +1,9 @@
 export const teamMembers = [
   {
     image: "https://images.unsplash.com/photo-1597347343908-2937e7dcc560",
-    name: "Alex Thompson",
-    role: "Head Trainer",
-    bio: "NASM certified trainer with 10+ years of experience in strength and conditioning.",
+    name: "Abhijit Kumar",
+    role: "Head Coach & Founder",
+    bio: "Certified fitness trainer with 10+ years of experience. Transformed over 1000+ lives through personalized training and challenges.",
     social: {
       instagram: "#",
       facebook: "#",
@@ -13,32 +13,11 @@ export const teamMembers = [
   {
     image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61",
     name: "Sarah Martinez",
-    role: "Yoga Instructor",
-    bio: "RYT-500 certified instructor specializing in vinyasa and power yoga.",
+    role: "Nutrition Specialist",
+    bio: "Registered dietitian helping you achieve your fitness goals through proper nutrition and meal planning.",
     social: {
       instagram: "#",
       facebook: "#"
-    }
-  },
-  {
-    image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc",
-    name: "Mike Johnson",
-    role: "CrossFit Coach",
-    bio: "CrossFit Level 2 trainer with a background in competitive athletics.",
-    social: {
-      instagram: "#",
-      twitter: "#"
-    }
-  },
-  {
-    image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110",
-    name: "Emily Chen",
-    role: "Nutrition Specialist",
-    bio: "Registered dietitian with expertise in sports nutrition and meal planning.",
-    social: {
-      instagram: "#",
-      facebook: "#",
-      twitter: "#"
     }
   }
 ];

@@ -5,9 +5,6 @@ const BookingForm: React.FC = () => {
     name: '',
     email: '',
     phone: '',
-    service: '',
-    date: '',
-    time: '',
     message: ''
   });
 
@@ -17,7 +14,7 @@ const BookingForm: React.FC = () => {
     console.log(formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -25,11 +22,11 @@ const BookingForm: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-zinc-900">
+    <section className="py-20 bg-zinc-900" id="contact">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h3 className="text-orange-500 mb-4">BOOK NOW</h3>
-          <h2 className="text-4xl font-bold text-white">SCHEDULE YOUR WORKOUT</h2>
+          <h3 className="text-orange-500 mb-4">GET IN TOUCH</h3>
+          <h2 className="text-4xl font-bold text-white">START YOUR TRANSFORMATION</h2>
         </div>
 
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
@@ -52,57 +49,30 @@ const BookingForm: React.FC = () => {
               className="bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Your Phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-              required
-            />
-            <select
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className="bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-              required
-            >
-              <option value="">Select Service</option>
-              <option value="personal-training">Personal Training</option>
-              <option value="group-class">Group Class</option>
-              <option value="nutrition">Nutrition Consultation</option>
-            </select>
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              className="bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-              required
-            />
-            <input
-              type="time"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              className="bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-              required
-            />
           </div>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 mb-6"
+            required
+          />
           <textarea
             name="message"
-            placeholder="Additional Notes"
+            placeholder="Tell us about your fitness goals"
             value={formData.message}
             onChange={handleChange}
             rows={4}
             className="w-full bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 mb-6"
+            required
           ></textarea>
           <button
             type="submit"
             className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
           >
-            Book Appointment
+            Send Message
           </button>
         </form>
       </div>

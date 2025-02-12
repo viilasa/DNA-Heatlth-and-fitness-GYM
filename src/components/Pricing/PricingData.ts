@@ -1,36 +1,36 @@
 export const pricingPlans = [
   {
-    title: "Basic",
-    price: 39,
+    title: "30 Day Challenge",
+    price: 199,
     features: [
-      "Access to gym floor",
-      "Basic equipment usage",
-      "Locker room access",
-      "2 group classes per month",
-      "Fitness assessment"
-    ]
-  },
-  {
-    title: "Pro",
-    price: 79,
-    features: [
-      "Full gym access",
-      "Unlimited group classes",
-      "1 personal training session",
-      "Nutrition consultation",
-      "Access to spa facilities"
+      "Daily workout plans",
+      "Nutrition guide",
+      "Progress tracking",
+      "Community access",
+      "Weekly group calls"
     ],
     isPopular: true
   },
   {
-    title: "Elite",
-    price: 129,
+    title: "Personal Training",
+    price: 299,
     features: [
-      "24/7 gym access",
-      "Unlimited group classes",
-      "4 personal training sessions",
-      "Monthly nutrition plan",
-      "Recovery room access"
+      "1-on-1 training sessions",
+      "Customized workout plan",
+      "Nutrition consultation",
+      "Progress monitoring",
+      "24/7 support"
+    ]
+  },
+  {
+    title: "Gym Membership",
+    price: 79,
+    features: [
+      "Full gym access",
+      "Basic equipment usage",
+      "Locker room access",
+      "Fitness assessment",
+      "Community events"
     ]
   }
 ];
