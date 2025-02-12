@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
             
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">
-                Hi, I'm Abhijit Kumar
+                Hi, I'm Abhijit 
               </h2>
               <p className="text-gray-300 mb-6">
                 With over a decade of experience in fitness training, I've dedicated my life to helping people achieve their health and fitness goals. My journey began as a personal transformation story, and it evolved into a passion for transforming others' lives.
