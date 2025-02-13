@@ -1,7 +1,7 @@
 export const teamMembers = [
   {
     image: "https://images.unsplash.com/photo-1597347343908-2937e7dcc560",
-    name: "Abhijit Kumar",
+    name: "Abhijit ",
     role: "Head Coach & Founder",
     bio: "Certified fitness trainer with 10+ years of experience. Transformed over 1000+ lives through personalized training and challenges.",
     social: {
