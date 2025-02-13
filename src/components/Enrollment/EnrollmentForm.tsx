@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import PaymentSection from './PaymentSection';
+import toast, { Toaster } from 'react-hot-toast';
+
+const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScDlYZJJQiona_gadhvfsJ7Rb53xnsx3LUY2aAG2Np4bq6WWQ/formResponse';
 
 interface EnrollmentFormProps {
   isOpen: boolean;
@@ -23,6 +26,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ isOpen, onClose }) => {
   });
 
   const [showPayment, setShowPayment] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -35,10 +39,33 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ isOpen, onClose }) => {
     return formData.name && formData.phone && formData.email && formData.instagram;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isFormValid()) {
+    if (!isFormValid()) return;
+
+    setIsSubmitting(true);
+
+    const formDataToSend = new FormData();
+    formDataToSend.append('entry.776718825', formData.name);
+    formDataToSend.append('entry.1752394193', formData.phone);
+    formDataToSend.append('entry.2091018902', formData.email);
+    formDataToSend.append('entry.1310142972', formData.instagram);
+    
+
+    try {
+      await fetch(GOOGLE_FORM_ACTION_URL, {
+        method: 'POST',
+        body: formDataToSend,
+        mode: 'no-cors',
+      });
+
+      toast.success('Enrollment information saved successfully!');
       setShowPayment(true);
+    } catch (error) {
+      toast.error('Failed to save enrollment information. Please try again.');
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -70,6 +97,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   className="w-full bg-black text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -85,6 +113,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   className="w-full bg-black text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -100,6 +129,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   className="w-full bg-black text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -115,19 +145,20 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   className="w-full bg-black text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
               <button
                 type="submit"
                 className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                  isFormValid()
+                  isFormValid() && !isSubmitting
                     ? 'bg-orange-500 hover:bg-orange-600 text-white'
                     : 'bg-gray-600 text-gray-300 cursor-not-allowed'
                 }`}
-                disabled={!isFormValid()}
+                disabled={!isFormValid() || isSubmitting}
               >
-                Proceed to Payment
+                {isSubmitting ? 'Processing...' : 'Proceed to Payment'}
               </button>
             </form>
           </>
@@ -135,6 +166,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ isOpen, onClose }) => {
           <PaymentSection onBack={() => setShowPayment(false)} />
         )}
       </div>
+      <Toaster position="top-right" />
     </div>
   );
 };
