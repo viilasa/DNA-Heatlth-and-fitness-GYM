@@ -1,9 +1,9 @@
 export const teamMembers = [
   {
-    image: "https://images.unsplash.com/photo-1597347343908-2937e7dcc560",
-    name: "Abhijit ",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739448080/Untitled_design_4_azvieo.png",
+    name: "Abhijit Naik",
     role: "Head Coach & Founder",
-    bio: "Certified fitness trainer with 10+ years of experience. Transformed over 1000+ lives through personalized training and challenges.",
+    bio: "Certified fitness trainer with 6+ years of experience. Transformed over 100+ lives through personalized training and challenges.",
     social: {
       instagram: "#",
       facebook: "#",

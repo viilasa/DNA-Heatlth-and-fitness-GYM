@@ -1,9 +1,34 @@
-import React from 'react';
-import { Calendar, Clock, Salad, Dumbbell, Users, Trophy } from 'lucide-react';
+import React, { useState } from 'react';
+import { Calendar, Dumbbell, Salad, Instagram, Phone, CreditCard } from 'lucide-react';
+import TimeTable from '../components/Challenge/TimeTable';
+import EnrollmentForm from '../components/Enrollment/EnrollmentForm';
+import TeamSection from '../components/Challenge/TeamSection';
 
 const ChallengePage: React.FC = () => {
-  const nextChallengeDate = "March 15, 2024";
+  const [isEnrollmentOpen, setIsEnrollmentOpen] = useState(false);
   
+  const workoutPrograms = [
+    "Upper Body Workouts",
+    "Lower Body Workouts",
+    "Abdominal & Core Strengthening",
+    "Strength Training Routines",
+    "TABATA Sessions",
+    "HIIT & Cardio Programs",
+    "CrossFit Workouts",
+    "Combat Training",
+    "EMOM (Every Minute on the Minute)"
+  ];
+
+  const dietPrograms = [
+    "Fat Loss Programs",
+    "Weight Gain Plans",
+    "Muscle Building Diets",
+    "PCOD/PCOS Management",
+    "Hemoglobin Control Plans",
+    "Kidney Stone Prevention",
+    "Thyroid Management"
+  ];
+
   return (
     <div className="pt-20 bg-black">
       {/* Hero Section */}
@@ -22,11 +47,24 @@ const ChallengePage: React.FC = () => {
               30 DAY <span className="text-orange-500">TRANSFORMATION</span> CHALLENGE
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Join the next challenge starting {nextChallengeDate}
+              Join our Instagram Live Fitness Classes and transform your life
             </p>
-            <button className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all transform hover:scale-105">
-              Enroll Now - ₹999
-            </button>
+            <div className="space-y-4">
+              <div className="inline-block bg-orange-500/50 px-6 py-3 rounded-full text-white backdrop-blur-sm">
+                <span className="font-bold">Early Bird Special:</span> ₹999/- (till 12th March)
+              </div>
+              <div className="block">
+                <span className="text-gray-300 px-6 py-3">Regular Fee:</span> ₹1,499/- (after 12th March)
+              </div>
+              <div className="block mt-8">
+                <button
+                  onClick={() => setIsEnrollmentOpen(true)}
+                  className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all transform hover:scale-105"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -34,123 +72,131 @@ const ChallengePage: React.FC = () => {
       {/* Program Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-zinc-900 p-8 rounded-lg transform transition-all hover:scale-105">
-              <Calendar className="w-12 h-12 text-orange-500 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Program Schedule</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>• 30 days of structured workouts</li>
-                <li>• Monday to Saturday training</li>
-                <li>• Sunday recovery sessions</li>
-                <li>• 45-60 minutes per session</li>
-              </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Workout Programs */}
+            <div className="bg-zinc-900 p-8 rounded-lg">
+              <div className="flex items-center space-x-4 mb-6">
+                <Dumbbell className="w-8 h-8 text-orange-500" />
+                <h2 className="text-2xl font-bold text-white">Workout Programs</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {workoutPrograms.map((program, index) => (
+                  <div key={index} className="flex items-center space-x-2 text-gray-300">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full" />
+                    <span>{program}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-lg transform transition-all hover:scale-105">
-              <Salad className="w-12 h-12 text-orange-500 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Nutrition Plan</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>• Personalized meal plans</li>
-                <li>• Grocery shopping guides</li>
-                <li>• Supplement recommendations</li>
-                <li>• Recipe collection</li>
-              </ul>
-            </div>
-
-            <div className="bg-zinc-900 p-8 rounded-lg transform transition-all hover:scale-105">
-              <Users className="w-12 h-12 text-orange-500 mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Support System</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>• WhatsApp support group</li>
-                <li>• Weekly progress check-ins</li>
-                <li>• Live Q&A sessions</li>
-                <li>• 24/7 email support</li>
-              </ul>
+            {/* Diet Programs */}
+            <div className="bg-zinc-900 p-8 rounded-lg">
+              <div className="flex items-center space-x-4 mb-6">
+                <Salad className="w-8 h-8 text-orange-500" />
+                <h2 className="text-2xl font-bold text-white">Diet Programs</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {dietPrograms.map((program, index) => (
+                  <div key={index} className="flex items-center space-x-2 text-gray-300">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full" />
+                    <span>{program}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Daily Schedule */}
+      {/* Team Section */}
+      <TeamSection />
+
+      {/* Schedule Section */}
       <section className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">DAILY SCHEDULE</h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-black p-6 rounded-lg flex items-center space-x-6">
-              <Clock className="w-12 h-12 text-orange-500 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Morning Workout</h3>
-                <p className="text-gray-400">6:00 AM - Live workout session with Abhijit</p>
-              </div>
-            </div>
-            
-            <div className="bg-black p-6 rounded-lg flex items-center space-x-6">
-              <Salad className="w-12 h-12 text-orange-500 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Meal Planning</h3>
-                <p className="text-gray-400">Daily nutrition tips and meal tracking</p>
-              </div>
-            </div>
-            
-            <div className="bg-black p-6 rounded-lg flex items-center space-x-6">
-              <Dumbbell className="w-12 h-12 text-orange-500 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Evening Session</h3>
-                <p className="text-gray-400">6:00 PM - Alternative workout session</p>
-              </div>
-            </div>
-            
-            <div className="bg-black p-6 rounded-lg flex items-center space-x-6">
-              <Trophy className="w-12 h-12 text-orange-500 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">Progress Tracking</h3>
-                <p className="text-gray-400">Daily check-ins and measurements</p>
-              </div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">LIVE CLASS SCHEDULE</h2>
+            <p className="text-gray-300">
+              Join our live fitness classes on Instagram from Monday to Saturday at 9:00 PM
+            </p>
+          </div>
+          <TimeTable />
+          <div className="mt-8 text-center text-gray-400">
+            * Time table will be updated weekly
           </div>
         </div>
       </section>
 
-      {/* Enrollment Process */}
+      {/* How to Join Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">HOW TO JOIN</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6">1</div>
-                <h3 className="text-xl font-bold text-white mb-4">Register</h3>
-                <p className="text-gray-400">Complete the enrollment form and make the payment</p>
+          <h2 className="text-4xl font-bold text-white text-center mb-16">3 EASY STEPS TO JOIN</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-zinc-900 p-6 rounded-lg text-center">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CreditCard className="w-8 h-8 text-white" />
               </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6">2</div>
-                <h3 className="text-xl font-bold text-white mb-4">Onboarding</h3>
-                <p className="text-gray-400">Get added to the support group and receive your welcome package</p>
+              <h3 className="text-xl font-bold text-white mb-2">1. Pay the Fees</h3>
+              <p className="text-gray-400">Choose your payment plan and complete the payment</p>
+            </div>
+            
+            <div className="bg-zinc-900 p-6 rounded-lg text-center">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-8 h-8 text-white" />
               </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6">3</div>
-                <h3 className="text-xl font-bold text-white mb-4">Begin</h3>
-                <p className="text-gray-400">Start your transformation journey with the group</p>
+              <h3 className="text-xl font-bold text-white mb-2">2. Take a Screenshot</h3>
+              <p className="text-gray-400">Save the payment confirmation screenshot</p>
+            </div>
+            
+            <div className="bg-zinc-900 p-6 rounded-lg text-center">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Instagram className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">3. Send Screenshot</h3>
+              <p className="text-gray-400">Share it with us on Instagram or WhatsApp</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Details */}
+      <section className="py-20 bg-zinc-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">CONTACT US</h2>
+            <div className="space-y-6">
+              <div>
+                <p className="text-gray-300 mb-2">Instagram</p>
+                <a href="https://instagram.com/fitnesswithabhijit07" 
+                   className="text-orange-500 font-semibold text-xl hover:text-orange-600 transition-colors">
+                  @fitnesswithabhijit07
+                </a>
+              </div>
+              <div>
+                <p className="text-gray-300 mb-2">Phone/WhatsApp</p>
+                <a href="tel:7798032404" 
+                   className="text-orange-500 font-semibold text-xl hover:text-orange-600 transition-colors">
+                  779 803 2404
+                </a>
+              </div>
+              <div className="pt-8">
+                <p className="text-gray-400 italic">
+                  Note: We'll verify your payment and grant you access to the program.
+                </p>
+                <p className="text-gray-400 mt-2">
+                  All live sessions will be available on IGTV for 24 hours.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-zinc-900">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">Ready to Transform?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the next challenge starting {nextChallengeDate}. Limited spots available!
-          </p>
-          <button className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all transform hover:scale-105">
-            Secure Your Spot Now
-          </button>
-        </div>
-      </section>
+      {/* Enrollment Form */}
+      <EnrollmentForm
+        isOpen={isEnrollmentOpen}
+        onClose={() => setIsEnrollmentOpen(false)}
+      />
     </div>
   );
 };

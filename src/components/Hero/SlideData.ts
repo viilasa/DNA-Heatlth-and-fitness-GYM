@@ -15,14 +15,14 @@ export const slides: Slide[] = [
     cta: "START YOUR JOURNEY"
   },
   {
-    image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739446329/photo-6330_o77bjm.jpg",
     title: "EXPERT\nGUIDANCE",
     subtitle: "TRAIN WITH ABHIJIT",
     description: "Benefit from my decade of experience in fitness training. I'll help you build strength, improve endurance, and develop healthy habits that last a lifetime.",
     cta: "BOOK A SESSION"
   },
   {
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739446329/photo-6324_m8iils.jpg",
     title: "STATE OF ART\nFACILITY",
     subtitle: "TRAIN IN STYLE",
     description: "Experience training in our modern, fully-equipped gym facility. Access top-quality equipment and a motivating environment to reach your fitness goals.",
