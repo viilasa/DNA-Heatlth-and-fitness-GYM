@@ -7,10 +7,12 @@ import GymPage from './pages/GymPage';
 import SuccessStoriesPage from './pages/SuccessStoriesPage';
 import AboutPage from './pages/AboutPage';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="bg-black min-h-screen">
         <Navbar />
         <Routes>
@@ -26,4 +28,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
