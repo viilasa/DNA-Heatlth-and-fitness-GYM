@@ -37,12 +37,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
         </div>
       </div>
 
-      <button
-        onClick={() => window.location.href = `upi://pay?pa=${upiId}&pn=AbhijitFitness&tn=30DayChallenge&am=999`}
-        className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors mb-6"
-      >
-        Pay with UPI Apps
-      </button>
+      
 
       <p className="text-gray-400 text-sm text-center">
         After payment, please take a screenshot and send it to us on WhatsApp or Instagram
