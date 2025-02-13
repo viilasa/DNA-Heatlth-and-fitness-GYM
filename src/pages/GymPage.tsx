@@ -32,7 +32,7 @@ const GymPage: React.FC = () => {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src="https://cdn.pixabay.com/photo/2014/11/11/15/24/gym-526995_1280.jpg"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739446329/photo-6324_m8iils.jpg"
             alt="Gym Facility"
             className="w-full h-full object-cover"
           />
