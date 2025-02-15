@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <SocialLink Icon={Facebook} href="#" label="Facebook" />
-              <SocialLink Icon={Instagram} href="#" label="Instagram" />
+              <SocialLink Icon={Instagram} href="https://www.instagram.com/dnahealthandfitnessgoa/?hl=en" label="Instagram" />
               <SocialLink Icon={Twitter} href="#" label="Twitter" />
               <SocialLink Icon={Youtube} href="#" label="Youtube" />
             </div>
@@ -39,7 +39,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-400">123 Fitness Street, Gym City, GC 12345</span>
+                <span className="text-gray-400">DNA Building, Rawanfond Cir, Madgaon, Davorlim, Goa</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-orange-500" />
