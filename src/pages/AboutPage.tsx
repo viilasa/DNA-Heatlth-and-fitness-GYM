@@ -5,24 +5,20 @@ const AboutPage: React.FC = () => {
   const achievements = [
     {
       icon: <Award className="w-12 h-12 text-orange-500" />,
-      value: "10+",
+      value: "6+",
       label: "Years Experience"
     },
     {
       icon: <Users className="w-12 h-12 text-orange-500" />,
-      value: "1000+",
+      value: "100+",
       label: "Clients Transformed"
     },
     {
       icon: <Clock className="w-12 h-12 text-orange-500" />,
       value: "15000+",
       label: "Training Hours"
-    },
-    {
-      icon: <Medal className="w-12 h-12 text-orange-500" />,
-      value: "25+",
-      label: "Fitness Certifications"
     }
+  
   ];
 
   return (
@@ -31,8 +27,8 @@ const AboutPage: React.FC = () => {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b"
-            alt="Abhijit Kumar"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739448080/Untitled_design_4_azvieo.png"
+            alt="Abhijit Naik"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
@@ -60,14 +56,14 @@ const AboutPage: React.FC = () => {
                 className="rounded-lg shadow-xl w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-orange-500 p-6 rounded-lg">
-                <p className="text-4xl font-bold text-white">10+</p>
+                <p className="text-4xl font-bold text-white">6+</p>
                 <p className="text-white">Years Experience</p>
               </div>
             </div>
             
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">
-                Hi, I'm Abhijit Kumar
+                Hi, I'm Abhijit Naik
               </h2>
               <p className="text-gray-300 mb-6">
                 With over a decade of experience in fitness training, I've dedicated my life to helping people achieve their health and fitness goals. My journey began as a personal transformation story, and it evolved into a passion for transforming others' lives.
