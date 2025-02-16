@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739448080/Untitled_design_4_azvieo.png"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739446361/photo-6363_iq3kpa.jpg"
             alt="Abhijit Naik"
             className="w-full h-full object-cover"
           />
@@ -51,8 +51,8 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1597347343908-2937e7dcc560"
-                alt="Abhijit Kumar Profile"
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739448080/Untitled_design_4_azvieo.png"
+                alt="Abhijit Naik Profile"
                 className="rounded-lg shadow-xl w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-orange-500 p-6 rounded-lg">
