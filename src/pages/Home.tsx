@@ -43,7 +43,7 @@ const Home: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739704718/DnaGymfeature_dfelpt.png"
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739704804/DnaGymfeature_wwsrgu.png"
                 alt="Our Gym Facility"
                 className="rounded-lg shadow-xl w-full"
               />
