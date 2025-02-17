@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">About GYMFIT</h3>
+            <h3 className="text-xl font-bold mb-4">Abhijit Fitness</h3>
             <p className="text-gray-400 mb-6">
               Transform your life through fitness. Join our community and achieve your health and fitness goals with expert guidance.
             </p>
@@ -57,8 +57,8 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Opening Hours</h3>
             <ul className="space-y-2">
               <li className="text-gray-400">Monday - Friday: <span className="text-white">6:00 AM - 10:00 PM</span></li>
-              <li className="text-gray-400">Saturday: <span className="text-white">7:00 AM - 8:00 PM</span></li>
-              <li className="text-gray-400">Sunday: <span className="text-white">8:00 AM - 6:00 PM</span></li>
+              <li className="text-gray-400">Saturday: <span className="text-white">6:00 AM - 10:00 PM</span></li>
+              <li className="text-gray-400">Sunday: <span className="text-white">Close</span></li>
             </ul>
           </div>
         </div>
