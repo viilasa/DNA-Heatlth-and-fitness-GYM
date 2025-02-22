@@ -1,90 +1,89 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
-const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const navLinks = [
-    { to: "/", label: "HOME" },
-    { to: "/challenge", label: "30 DAY CHALLENGE" },
-    { to: "/gym", label: "OUR GYM" },
-    { to: "/success-stories", label: "SUCCESS STORIES" },
-    { to: "/about", label: "ABOUT ME" },
-    
-  ];
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <nav className="fixed w-full z-50 bg-black/90 text-white">
-      <div className="container mx-auto px-4 py-2">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+    <nav className="bg-[#203644] shadow-md fixed w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-20 items-center">
+          {/* Logo */}
+          <div className="flex items-center">
             <img 
-              src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739374295/1logo_Abhi_tqfmuu.png" 
-              alt="Abhijit Fitness Logo" 
-              className="h-20 w-auto"
+              src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739898963/wefindhome.pdf_4_qg1a2q.svg"
+              alt="We Find Homes Logo"
+              className="h-16 md:h-24"
             />
-          </Link>
-          
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="hover:text-orange-500 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
           </div>
-          
-          <button 
-            className="md:hidden text-white z-50"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#why" className="text-[#C5A572] hover:text-[#D4B683] transition-colors">Why Us</a>
+            <a href="#how" className="text-[#C5A572] hover:text-[#D4B683] transition-colors">How We Work</a>
+            <a href="#contact" className="text-[#C5A572] hover:text-[#D4B683] transition-colors">Contact</a>
+            <ThemeToggle />
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
+            <button
+              onClick={toggleMenu}
+              className="text-[#C5A572] hover:text-[#D4B683] transition-colors p-2"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div 
-        className={`fixed inset-0 bg-black/50 md:hidden transition-opacity duration-300 ${
-          isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      />
-
-      <div 
-        className={`fixed top-0 right-0 h-full w-64 bg-black transform transition-transform duration-300 ease-in-out z-40 ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden`}
+      {/* Mobile Navigation */}
+      <div
+        className={`
+          fixed inset-0 top-20 bg-[#203644] z-40 transform transition-transform duration-300 ease-in-out
+          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+          md:hidden
+        `}
       >
-        <div className="flex flex-col pt-20 p-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="text-white hover:text-orange-500 transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="flex flex-col space-y-4 p-6">
+          <a
+            href="#why"
+            onClick={closeMenu}
+            className="text-[#C5A572] hover:text-[#D4B683] transition-colors py-2 text-lg font-medium border-b border-[#C5A572]/20"
+          >
+            Why Us
+          </a>
+          <a
+            href="#how"
+            onClick={closeMenu}
+            className="text-[#C5A572] hover:text-[#D4B683] transition-colors py-2 text-lg font-medium border-b border-[#C5A572]/20"
+          >
+            How We Work
+          </a>
+          <a
+            href="#contact"
+            onClick={closeMenu}
+            className="text-[#C5A572] hover:text-[#D4B683] transition-colors py-2 text-lg font-medium"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

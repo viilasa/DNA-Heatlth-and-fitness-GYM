@@ -1,30 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import ChallengePage from './pages/ChallengePage';
-import GymPage from './pages/GymPage';
-import SuccessStoriesPage from './pages/SuccessStoriesPage';
-import AboutPage from './pages/AboutPage';
-import Footer from './components/Footer/Footer';
-import ScrollToTop from './components/ScrollToTop';
+import Hero from './components/Hero';
+import WhyUs from './components/WhyUs';
+import HowWeWork from './components/HowWeWork';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="bg-black min-h-screen">
+    <ThemeProvider>
+      <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/challenge" element={<ChallengePage />} />
-          <Route path="/gym" element={<GymPage />} />
-          <Route path="/success-stories" element={<SuccessStoriesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
+        <Hero />
+        <WhyUs />
+        <HowWeWork />
+        <Contact />
         <Footer />
       </div>
-    </Router>
+    </ThemeProvider>
   );
 }
 
