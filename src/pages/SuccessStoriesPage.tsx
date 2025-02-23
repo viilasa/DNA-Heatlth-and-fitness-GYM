@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import successStoriesData from '../successStories.json'; // ✅ Import JSON directly
+import successStoriesData from './successStories.json'; // ✅ Import JSON directly
 import { Star, Users, Award, Clock, Dumbbell } from 'lucide-react';
 
 // Define TypeScript interfaces for structured data
