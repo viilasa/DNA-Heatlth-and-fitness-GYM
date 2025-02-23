@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import successStoriesData from '../successStories.json'; // ✅ Import JSON directly
 import { Star, Users, Award, Clock, Dumbbell } from 'lucide-react';
 
 const SuccessStoriesPage = () => {
   const [successStories, setSuccessStories] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the JSON file
-    fetch('/successStories.json')
-      .then((response) => response.json())
-      .then((data) => setSuccessStories(data))
-      .catch((error) => console.error('Error fetching success stories:', error));
+    setSuccessStories(successStoriesData); // ✅ Load JSON data directly
   }, []);
 
   const stats = [
@@ -20,7 +17,7 @@ const SuccessStoriesPage = () => {
   ];
 
   return (
-    <div className="pt-20 bg-black">
+    <div className="pt-20 bg-black min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
@@ -48,9 +45,9 @@ const SuccessStoriesPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">OUR IMPACT</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            We've helped hundreds of people transform their lives through dedicated fitness coaching and support
+            We've helped hundreds of people transform their lives through dedicated fitness coaching and support.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center transform transition-all hover:scale-105">
                 <div className="bg-black rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center">
