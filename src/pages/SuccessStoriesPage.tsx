@@ -25,7 +25,7 @@ interface SuccessStoriesPageProps {
   format?: 'simple' | 'detailed';
 }
 
-const SuccessStoriesPage: React.FC<SuccessStoriesPageProps> = ({ format = 'detailed' }) => {
+const SuccessStoriesPage: React.FC<SuccessStoriesPageProps> = ({ format = 'simple' }) => {
   const [successStories, setSuccessStories] = useState<SuccessStory[]>([]);
 
   useEffect(() => {
