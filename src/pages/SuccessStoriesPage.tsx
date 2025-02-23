@@ -6,7 +6,7 @@ const SuccessStoriesPage = () => {
 
   useEffect(() => {
     // Fetch data from the JSON file
-    fetch('src/successStories.json')
+    fetch('/successStories.json')
       .then((response) => response.json())
       .then((data) => setSuccessStories(data))
       .catch((error) => console.error('Error fetching success stories:', error));
