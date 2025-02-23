@@ -1,47 +1,35 @@
 import React, { useState, useEffect } from 'react';
+import successStories from '../assets/successStories.json'; // ✅ Import JSON directly
 import { Star, Users, Award, Clock, Dumbbell } from 'lucide-react';
 
 const SuccessStoriesPage = () => {
-  const [successStories, setSuccessStories] = useState([]);
+  const [stories, setStories] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the JSON file
-    fetch('/successStories.json')
-      .then((response) => response.json())
-      .then((data) => setSuccessStories(data))
-      .catch((error) => console.error('Error fetching success stories:', error));
+    setStories(successStories); // ✅ Load JSON data directly
   }, []);
-
-  const stats = [
-    { icon: <Users className="w-12 h-12 text-orange-500" />, value: "100+", label: "Transformations" },
-    { icon: <Award className="w-12 h-12 text-orange-500" />, value: "95%", label: "Success Rate" },
-    { icon: <Clock className="w-12 h-12 text-orange-500" />, value: "30", label: "Day Challenge" },
-    { icon: <Dumbbell className="w-12 h-12 text-orange-500" />, value: "6+", label: "Years Experience" }
-  ];
 
   return (
     <div className="pt-20 bg-black">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center">
-        <div className="absolute inset-0">
-          <img 
-            src="https://cdn.pixabay.com/photo/2016/03/27/07/08/man-1282232_960_720.jpg"
-            alt="Success Stories"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              REAL PEOPLE <span className="text-orange-500">REAL RESULTS</span>
-            </h1>
-            <p className="text-xl text-gray-300">
-              Inspiring transformations from our fitness community
-            </p>
+      <h1 className="text-4xl text-white text-center mb-10">
+        Success Stories
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {stories.map((story) => (
+          <div key={story.id} className="bg-zinc-900 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-white mb-2">{story.name}</h3>
+            <p className="text-gray-300 italic mb-4">"{story.testimonial}"</p>
+            <div className="flex space-x-2">
+              {[...Array(story.rating)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-orange-500 fill-orange-500" />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  );
+};
 
       {/* Stats Section */}
       <section className="py-20 bg-zinc-900">
