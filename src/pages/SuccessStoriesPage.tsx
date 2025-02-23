@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import successStoriesData from '../data/successStories.json';
-import { Star, Users, Award, Clock, Dumbbell } from 'lucide-react';
+import { Users, Award, Clock, Dumbbell } from 'lucide-react';
 
 // Define TypeScript interfaces
 interface SuccessStory {
@@ -115,6 +115,9 @@ const SuccessStoriesPage: React.FC<SuccessStoriesPageProps> = ({ format = 'simpl
                   </div>
                   <div className="p-4 flex-1 flex flex-col justify-between">
                     <h3 className="text-xl font-bold text-white mt-0">{story.name}</h3>
+                    <p className="text-gray-400">Age: {story.age}</p>
+                    <p className="text-gray-400">Duration: {story.duration}</p>
+                    <p className="text-gray-400">Weight Lost: {story.weightLoss}</p>
                   </div>
                 </div>
               )
