@@ -2,14 +2,33 @@ import React, { useState, useEffect } from 'react';
 import successStoriesData from '../successStories.json'; // ✅ Import JSON directly
 import { Star, Users, Award, Clock, Dumbbell } from 'lucide-react';
 
-const SuccessStoriesPage = () => {
-  const [successStories, setSuccessStories] = useState([]);
+// Define TypeScript interfaces for structured data
+type SuccessStory = {
+  id: number;
+  name: string;
+  age: number;
+  duration: string;
+  weightLoss: string;
+  testimonial: string;
+  rating: number;
+  beforeImage?: string;
+  afterImage: string;
+};
+
+type Stat = {
+  icon: JSX.Element;
+  value: string;
+  label: string;
+};
+
+const SuccessStoriesPage: React.FC = () => {
+  const [successStories, setSuccessStories] = useState<SuccessStory[]>([]);
 
   useEffect(() => {
-    setSuccessStories(successStoriesData); // ✅ Load JSON data directly
+    setSuccessStories(successStoriesData as SuccessStory[]); // ✅ Type assertion
   }, []);
 
-  const stats = [
+  const stats: Stat[] = [
     { icon: <Users className="w-12 h-12 text-orange-500" />, value: "100+", label: "Transformations" },
     { icon: <Award className="w-12 h-12 text-orange-500" />, value: "95%", label: "Success Rate" },
     { icon: <Clock className="w-12 h-12 text-orange-500" />, value: "30", label: "Day Challenge" },
@@ -85,7 +104,6 @@ const SuccessStoriesPage = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-xl font-bold text-white">{story.name}</h3>
@@ -95,7 +113,6 @@ const SuccessStoriesPage = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="grid grid-cols-3 gap-4 mb-4">
                     <div className="text-center">
                       <p className="text-gray-400 text-sm">Age</p>
@@ -110,7 +127,6 @@ const SuccessStoriesPage = () => {
                       <p className="text-white font-bold">{story.weightLoss}</p>
                     </div>
                   </div>
-
                   <p className="text-gray-300 italic">"{story.testimonial}"</p>
                 </div>
               </div>
