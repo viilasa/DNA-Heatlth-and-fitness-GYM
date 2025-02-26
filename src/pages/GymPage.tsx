@@ -4,6 +4,7 @@ import GalleryView from '../components/Gallery/GalleryView';
 import Pricing from '../components/Pricing/Pricing'
 import Ourstory from '../components/Story/StorySection'
 import GymTeam from '../components/Team/GymTeam';
+import WhatsAppCTA from '../components/WhatsApp/WhatsAppCTA';
 
 const GymPage: React.FC = () => {
   const [classCapacity, setClassCapacity] = useState({
@@ -234,19 +235,24 @@ const GymPage: React.FC = () => {
       <Ourstory />
 
       {/* Call to Action */}
-      <section className="py-20 bg-zinc-900">
+     <section className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your Transformation?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-             Join now 
+            Limited-time offer: Join now and get your first week free!
           </p>
-          <button className="bg-orange-500 text-white px-12 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all transform hover:scale-105">
-            Whats Stopping You
-          </button>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            
+            <WhatsAppCTA 
+              phoneNumber="919022701531" 
+              message="Hello,  Please provide more detailsa about memberships."
+              className="px-12"
+            />
+          </div>
           <p className="text-gray-400 mt-4 text-sm">
-            * Terms and conditions apply.
+            * Offer valid for new members only. Terms and conditions apply.
           </p>
         </div>
       </section>
