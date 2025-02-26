@@ -64,7 +64,7 @@ const NucleusBanner: React.FC = () => {
               ${isHovered ? 'scale-105' : 'scale-100'}`}
             >
               <img 
-                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1740568526/Untitled_design_5_zsiute.svg"
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1740569118/Untitled_design_6_gfrwjh.svg"
                 alt="Nucleus Logo"
                 className="h-40 md:h-48 lg:h-56 w-auto max-w-full rounded-2xl
                   transition-all duration-500 font-[\'Playfair Display\', serif]
