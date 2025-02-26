@@ -5,15 +5,15 @@ export interface GalleryItem {
 
 export const galleryData: GalleryItem[] = [
   {
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1740475086/photo-6391_yzxwxb.jpg",
     title: "Main Gym Area"
   },
   {
-    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739446329/photo-6330_o77bjm.jpg",
     title: "Cardio Zone"
   },
   {
-    image: "https://images.unsplash.com/photo-1534258936925-c58bed479fcb",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739446329/photo-6324_m8iils.jpg",
     title: "Weight Training"
   },
   {

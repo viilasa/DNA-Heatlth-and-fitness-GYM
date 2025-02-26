@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero/Hero';
 import Features from '../components/Features';
 import Team from '../components/Team/Team';
+
 import BookingForm from '../components/Booking/BookingForm';
 import { Link } from 'react-router-dom';
 import { Star, Dumbbell, Users, ShoppingBag, Trophy } from 'lucide-react';
@@ -23,7 +24,7 @@ const Home: React.FC = () => {
       title: "30 Day Online Challenge",
       description: "Transform your body with our signature program",
       icon: <Trophy className="w-12 h-12" />,
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
+      image: "https://assets.entrepreneur.com/content/3x2/2000/20171108215301-GettyImages-512891759.jpeg",
       link: "/challenge"
     },
     {
@@ -44,8 +45,8 @@ const Home: React.FC = () => {
       title: "Supplement and Nutrition",
       description: "Premium fitness gear and supplements",
       icon: <ShoppingBag className="w-12 h-12" />,
-      link: "https://nucleus-store.com",
-      image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df"
+      image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df",
+      link: "/supplements"
     }
   ];
 

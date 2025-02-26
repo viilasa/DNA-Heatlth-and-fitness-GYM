@@ -62,7 +62,7 @@ const BookingForm: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h3 className="text-orange-500 mb-4">GET IN TOUCH</h3>
-          <h2 className="text-4xl font-bold text-white">START YOUR TRANSFORMATION</h2>
+          <h2 className="text-4xl font-bold text-white">What would you like to know about?</h2>
         </div>
 
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
@@ -100,7 +100,7 @@ const BookingForm: React.FC = () => {
           />
           <textarea
             name="message"
-            placeholder="Tell us about your fitness goals"
+            placeholder="Message"
             value={formData.message}
             onChange={handleChange}
             rows={4}

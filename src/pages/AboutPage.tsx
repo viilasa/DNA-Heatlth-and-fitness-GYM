@@ -1,24 +1,73 @@
 import React from 'react';
-import { Award, Users, Clock, Medal } from 'lucide-react';
+import { Award, Users, Clock, Medal, Globe } from 'lucide-react';
+import useCountUp from '../hooks/useCountUp';
+import CertificationSection from '../components/About/CertificationSection';
 
 const AboutPage: React.FC = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('stats-section');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
   const achievements = [
     {
       icon: <Award className="w-12 h-12 text-orange-500" />,
-      value: "6+",
+      value: useCountUp({
+        end: 12,
+        suffix: '+',
+        duration: 2000,
+        start: isVisible ? 0 : 6
+      }),
       label: "Years Experience"
     },
     {
       icon: <Users className="w-12 h-12 text-orange-500" />,
-      value: "100+",
+      value: useCountUp({
+        end: 3000,
+        suffix: '+',
+        duration: 2000,
+        start: isVisible ? 0 : 100
+      }),
       label: "Clients Transformed"
     },
     {
       icon: <Clock className="w-12 h-12 text-orange-500" />,
-      value: "15000+",
+      value: useCountUp({
+        end: 150000,
+        suffix: '+',
+        duration: 2000,
+        start: isVisible ? 0 : 15000
+      }),
       label: "Training Hours"
+    },
+    {
+      icon: <Globe className="w-12 h-12 text-orange-500" />,
+      value: useCountUp({
+        end: 4,
+        duration: 2000,
+        start: isVisible ? 0 : 4
+      }),
+      label: "Continents Transformed"
     }
-  
   ];
 
   return (
@@ -56,7 +105,7 @@ const AboutPage: React.FC = () => {
                 className="rounded-lg shadow-xl w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-orange-500 p-6 rounded-lg">
-                <p className="text-4xl font-bold text-white">6+</p>
+                <p className="text-4xl font-bold text-white">12+</p>
                 <p className="text-white">Years Experience</p>
               </div>
             </div>
@@ -87,24 +136,27 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 bg-zinc-900">
+      <section id="stats-section" className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center transform transition-all hover:scale-105">
-                <div className="bg-black rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                <div className="bg-black rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
                   {achievement.icon}
                 </div>
-                <p className="text-4xl font-bold text-white mb-2">{achievement.value}</p>
-                <p className="text-gray-400">{achievement.label}</p>
+                <p className="text-3xl md:text-4xl font-bold text-white mb-2">{achievement.value}</p>
+                <p className="text-sm md:text-base text-gray-400">{achievement.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Certifications Section */}
+      <CertificationSection />
+
       {/* Philosophy Section */}
-      <section className="py-20 bg-zinc-900">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-8">My Training Philosophy</h2>

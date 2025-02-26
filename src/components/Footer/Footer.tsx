@@ -9,7 +9,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Abhijit Fitness</h3>
+          <img 
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739374295/1logo_Abhi_tqfmuu.png"
+            alt="Abhijit Fitness Logo" 
+            />
             <p className="text-gray-400 mb-6">
               Transform your life through fitness. Join our community and achieve your health and fitness goals with expert guidance.
             </p>
@@ -66,7 +69,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-zinc-800 pt-8">
           <p className="text-center text-gray-400">
-            © {new Date().getFullYear()} GYMFIT. All rights reserved.
+            © {new Date().getFullYear()} Abhijit Fitness. All rights reserved.
           </p>
         </div>
       </div>

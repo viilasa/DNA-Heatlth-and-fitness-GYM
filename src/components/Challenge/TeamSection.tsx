@@ -27,7 +27,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61",
-    name: "dt. Richa Shet Talaunlikar",
+    name: "Dt. Richa Shet Talaunlikar",
     role: "Nutrition Specialist",
     bio: "Expert nutritionist helping you achieve your fitness goals through personalized diet plans and nutrition guidance.",
     social: {

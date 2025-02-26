@@ -1,21 +1,100 @@
 import React, { useState, useEffect } from 'react';
 import successStoriesData from '../data/successStories.json';
 import { Users, Award, Clock, Dumbbell } from 'lucide-react';
+import useCountUp from '../hooks/useCountUp';
 
-// ... (keep your existing interfaces)
+interface SuccessStory {
+  id: string;
+  name: string;
+  age: number;
+  duration: string;
+  weightLoss: string;
+  beforeImage: string;
+  afterImage: string;
+  testimonial: string;
+  rating: number;
+}
+
+interface Stat {
+  icon: React.ReactNode;
+  value: string;
+  label: string;
+}
+
+interface SuccessStoriesPageProps {
+  format?: 'simple' | 'detailed';
+}
 
 const SuccessStoriesPage: React.FC<SuccessStoriesPageProps> = ({ format = 'simple' }) => {
   const [successStories, setSuccessStories] = useState<SuccessStory[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setSuccessStories(successStoriesData as SuccessStory[]);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('stats-section');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
   const stats: Stat[] = [
-    { icon: <Users className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />, value: "100+", label: "Transformations" },
-    { icon: <Award className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />, value: "95%", label: "Success Rate" },
-    { icon: <Clock className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />, value: "30", label: "Day Challenge" },
-    { icon: <Dumbbell className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />, value: "6+", label: "Years Experience" }
+    {
+      icon: <Users className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />,
+      value: useCountUp({
+        end: 3000,
+        suffix: '+',
+        duration: 2000,
+        start: isVisible ? 0 : 100
+      }),
+      label: "Transformations"
+    },
+    {
+      icon: <Award className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />,
+      value: useCountUp({
+        end: 96,
+        suffix: '%',
+        duration: 2000,
+        start: isVisible ? 0 : 95
+      }),
+      label: "Success Rate"
+    },
+    {
+      icon: <Clock className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />,
+      value: useCountUp({
+        end: 30,
+        duration: 2000,
+        start: isVisible ? 0 : 30
+      }),
+      label: "Day Challenge"
+    },
+    {
+      icon: <Dumbbell className="w-8 h-8 md:w-12 md:h-12 text-orange-500" />,
+      value: useCountUp({
+        end: 12,
+        suffix: '+',
+        duration: 2000,
+        start: isVisible ? 0 : 6
+      }),
+      label: "Years Experience"
+    }
   ];
 
   return (
@@ -41,7 +120,7 @@ const SuccessStoriesPage: React.FC<SuccessStoriesPageProps> = ({ format = 'simpl
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 md:py-20 bg-zinc-900">
+      <section id="stats-section" className="py-12 md:py-20 bg-zinc-900">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">OUR IMPACT</h2>
           <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">

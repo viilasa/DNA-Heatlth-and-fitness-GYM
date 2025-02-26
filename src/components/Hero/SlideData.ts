@@ -8,7 +8,7 @@ export interface Slide {
 
 export const slides: Slide[] = [
   {
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image: "https://true-elevate.com/wp-content/uploads/2024/12/1.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     title: "30 DAY\nTRANSFORMATION",
     subtitle: "JOIN THE CHALLENGE",
     description: "Transform your body and mind with my signature 30-day fitness challenge. Get personalized workouts, nutrition plans, and daily motivation to achieve your goals.",
