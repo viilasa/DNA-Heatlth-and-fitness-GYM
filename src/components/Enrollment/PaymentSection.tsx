@@ -6,10 +6,9 @@ interface PaymentSectionProps {
 }
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
-  const upiId = "test02@oksbi";
+  const upiId = "suryanature02@oksbi";
   const qrCodeUrl = "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739826406/Scan_the_code_kalv8o.png"; // Replace with actual QR code URL
-  const phoneNumber = "+917798032404";
-  
+  const phoneNumber = "8767530469";
 
   const handleCopyUpiId = () => {
     navigator.clipboard.writeText(upiId);
@@ -17,13 +16,13 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
   };
 
   const handleUpiRedirect = () => {
-    const upiUrl = `upi://pay?pa=suryanature02@oksbi&pn=SuryaNature&cu=INR`;
+    const upiUrl = `upi://pay?pa=$suryanature02@oksbi&pn=SuryaNature&cu=INR`;
     window.location.href = upiUrl;
   };
 
-  const handlePhoneRedirect = () => {
-    const upiUrl = `upi://pay?pa=8767530469@upi&pn=SuryaNature&cu=INR`;
-    window.location.href = phoneUpiUrl;;
+  const handlePhoneUpiRedirect = () => {
+    const phoneUpiUrl = `upi://pay?pa=$8767530469@upi&pn=SuryaNature&cu=INR`;
+    window.location.href = phoneUpiUrl;
   };
 
   return (
@@ -64,10 +63,10 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
         <div className="text-gray-300 mb-2">
           <p>Contact us after payment:</p>
           <button
-            onClick={handlePhoneRedirect}
+            onClick={handlePhoneUpiRedirect}
             className="text-orange-500 font-semibold hover:underline flex items-center justify-center mx-auto"
           >
-            +91 779 803 2404
+            Pay via UPI: {phoneNumber}
             <ExternalLink className="w-4 h-4 ml-1" />
           </button>
         </div>
