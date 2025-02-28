@@ -16,12 +16,12 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
   };
 
   const handleUpiRedirect = () => {
-    const upiUrl = `upi://pay?pa=$suryanature02@oksbi&pn=SuryaNature&cu=INR`;
+    const upiUrl = `upi://pay?pa=${upiId}&pn=SuryaNature&cu=INR`;
     window.location.href = upiUrl;
   };
 
   const handlePhoneUpiRedirect = () => {
-    const phoneUpiUrl = `upi://pay?pa=$8767530469@upi&pn=SuryaNature&cu=INR`;
+    const phoneUpiUrl = `upi://pay?pa=${phoneNumber}@upi&pn=SuryaNature&cu=INR`;
     window.location.href = phoneUpiUrl;
   };
 
