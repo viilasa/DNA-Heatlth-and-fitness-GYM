@@ -16,7 +16,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
   };
 
   const handleUpiRedirect = () => {
-    const upiUrl = `upi://pay?pa=${upiId}&pn=AbhijitFitness&cu=INR`;
+    const upiUrl = `upi://pay?pa=suryanature02@oksbi&pn=SuryaNature&cu=INR`;
     window.location.href = upiUrl;
   };
 
