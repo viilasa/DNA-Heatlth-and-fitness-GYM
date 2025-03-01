@@ -9,7 +9,6 @@ import AboutPage from './pages/AboutPage';
 import SupplementsPage from './pages/SupplementsPage';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import BackgroundAudio from './components/Audio/BackgroundAudio';
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
           <Route path="/supplements" element={<SupplementsPage />} />
         </Routes>
         <Footer />
-        <BackgroundAudio audioUrl="https://res.cloudinary.com/ddhhlkyut/video/upload/v1740848814/vid_fexpdb.mp4" />
       </div>
     </Router>
   );
