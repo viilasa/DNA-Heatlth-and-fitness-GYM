@@ -1,11 +1,14 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { slides } from './SlideData';
 import SlideButton from './SlideButton';
 import SlideIndicators from './SlideIndicators';
 import MobileVideoSlider from './MobileVideoSlider';
+import { Volume2, VolumeX } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMuted, setIsMuted] = useState(true);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const videoUrl = "https://res.cloudinary.com/ddhhlkyut/video/upload/v1740848814/vid_fexpdb.mp4";
 
   const nextSlide = useCallback(() => {
@@ -20,6 +23,83 @@ const Hero: React.FC = () => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, [nextSlide]);
+
+  useEffect(() => {
+    // Create audio element
+    const audio = new Audio(videoUrl);
+    audio.loop = true;
+    audio.muted = true; // Start muted to comply with autoplay policies
+    audio.volume = 0;
+    audioRef.current = audio;
+
+    // Set up event listeners
+    audio.addEventListener('canplaythrough', () => {
+      // Audio is ready to play
+    });
+
+    // Load the audio
+    audio.load();
+
+    // Try to play (will likely be blocked but we try anyway)
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.log("Autoplay prevented initially, waiting for user interaction");
+      });
+    }
+
+    // Handle user interaction to enable audio
+    const handleUserInteraction = () => {
+      if (audioRef.current) {
+        // Try to play on user interaction
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(error => {
+            console.log("Still couldn't play audio after user interaction");
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleUserInteraction, { once: true });
+    document.addEventListener('touchstart', handleUserInteraction, { once: true });
+
+    // Cleanup function
+    return () => {
+      audio.pause();
+      audio.src = '';
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('touchstart', handleUserInteraction);
+    };
+  }, [videoUrl]);
+
+  // Toggle mute/unmute
+  const toggleMute = () => {
+    if (audioRef.current) {
+      if (isMuted) {
+        // Unmute
+        audioRef.current.muted = false;
+        audioRef.current.volume = 0.5;
+        
+        // Try to play if it's not already playing
+        if (audioRef.current.paused) {
+          const playPromise = audioRef.current.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(error => {
+              console.log("Couldn't play audio on unmute");
+              return;
+            });
+          }
+        }
+      } else {
+        // Mute
+        audioRef.current.volume = 0;
+        audioRef.current.muted = true;
+      }
+      
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <>
@@ -62,6 +142,19 @@ const Hero: React.FC = () => {
             </div>
           </div>
         ))}
+
+        {/* Mute Button - Only visible on desktop */}
+        <button
+          onClick={toggleMute}
+          className="absolute bottom-8 left-8 z-20 w-10 h-10 bg-black/60 backdrop-blur-sm rounded-full flex items-center justify-center opacity-80 hover:opacity-100 transition-all duration-300"
+          aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+        >
+          {isMuted ? (
+            <VolumeX className="w-6 h-6 text-white" />
+          ) : (
+            <Volume2 className="w-6 h-6 text-white" />
+          )}
+        </button>
 
         <SlideButton direction="left" onClick={prevSlide} />
         <SlideButton direction="right" onClick={nextSlide} />
