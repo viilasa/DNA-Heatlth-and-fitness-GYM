@@ -5,12 +5,14 @@ interface WhatsAppButtonProps {
   phoneNumber: string;
   message?: string;
   className?: string;
+  buttonText?: string; // New prop to customize button text
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ 
   phoneNumber, 
   message = "Hello, I would like to know more about your products.",
-  className = ""
+  className = "",
+  buttonText = "Chat on WhatsApp" // Default button text
 }) => {
   const handleWhatsAppClick = () => {
     // Encode the message for URL
@@ -28,7 +30,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
       aria-label="Contact us on WhatsApp"
     >
       <MessageCircle className="w-5 h-5 mr-2" />
-      Chat on WhatsApp
+      {buttonText} {/* Dynamically updating button text */}
     </button>
   );
 };

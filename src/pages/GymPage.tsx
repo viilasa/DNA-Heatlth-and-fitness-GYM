@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dumbbell, Users, Shield, Timer, Star, ArrowRight, CheckCircle2, Clock } from 'lucide-react';
 import GalleryView from '../components/Gallery/GalleryView';
 import Pricing from '../components/Pricing/Pricing'
 import Ourstory from '../components/Story/StorySection'
 import GymTeam from '../components/Team/GymTeam';
 import WhatsAppCTA from '../components/WhatsApp/WhatsAppCTA';
+import useLoadingAnimation from '../hooks/useLoadingAnimation';
+
 
 const GymPage: React.FC = () => {
   const [classCapacity, setClassCapacity] = useState({
     morning: 85,
     afternoon: 60,
     evening: 92
+  });
+  
+  // Use our custom loading animation hook
+  const { isAnimating, style } = useLoadingAnimation({ 
+    initialDelay: 500, // Slightly longer delay for better UX
+    duration: 1800 // Slightly longer animation for smoother effect
   });
 
   const facilities = [
@@ -84,17 +92,20 @@ const GymPage: React.FC = () => {
               Join the fastest-growing fitness community in Goa. Limited spots available for new members.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all transform hover:scale-105 flex items-center">
-                Start Your Fitness Journey Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              
+              <WhatsAppCTA
+                phoneNumber="919022701531" 
+                message="Hello, I would like to know more about your gym and fitness programs."
+                buttonText="Start Your Fitness Journey Today" // Custom button text
+              />
+            
               
             </div>
           </div>
         </div>
       </section>
 
-      {/* Live Class Status */}
+       {/* Live Class Status */}
       <section className="py-10 bg-zinc-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -111,8 +122,11 @@ const GymPage: React.FC = () => {
                   </div>
                   <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                     <div 
-                      className="h-full bg-orange-500 transition-all duration-500"
-                      style={{ width: `${capacity}%` }}
+                      className="h-full bg-orange-500 transition-all ease-out"
+                      style={{ 
+                        width: isAnimating ? `${capacity}%` : '0%',
+                        transitionDuration: style.transitionDuration
+                      }}
                     />
                   </div>
                   {capacity > 80 && (
@@ -246,8 +260,10 @@ const GymPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             
             <WhatsAppCTA 
+              
               phoneNumber="919022701531" 
               message="Hello,  Please provide more detailsa about memberships."
+              buttonText="Ask About Memberships" // Custom button text
               className="px-12"
             />
           </div>
