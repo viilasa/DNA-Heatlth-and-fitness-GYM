@@ -9,8 +9,12 @@ const BackgroundAudio: React.FC<BackgroundAudioProps> = ({ audioUrl }) => {
   const [isMuted, setIsMuted] = useState(true); // Start muted by default
   const [isLoaded, setIsLoaded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const heroSectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    // Find the hero section
+    heroSectionRef.current = document.querySelector('section.h-screen');
+
     // Create audio element
     const audio = new Audio(audioUrl);
     audio.loop = true;
@@ -89,19 +93,7 @@ const BackgroundAudio: React.FC<BackgroundAudioProps> = ({ audioUrl }) => {
 
   if (!isLoaded) return null;
 
-  return (
-    <button
-      onClick={toggleMute}
-      className="fixed bottom-5 left-5 z-50 w-6 h-6 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 md:hidden"
-      aria-label={isMuted ? "Unmute background music" : "Mute background music"}
-    >
-      {isMuted ? (
-        <VolumeX className="w-4 h-4 text-white" />
-      ) : (
-        <Volume2 className="w-4 h-4 text-white" />
-      )}
-    </button>
-  );
+  return null; // We don't need this component to render anything since we're using the mute button in the hero section
 };
 
 export default BackgroundAudio;
