@@ -149,6 +149,19 @@ const MobileVideoSlider: React.FC<MobileVideoSliderProps> = ({ videoUrl }) => {
             </div>
           </div>
 
+          {/* Mute Button - Always visible in bottom right corner of video */}
+          <button
+            onClick={toggleMute}
+            className="absolute bottom-4 right-4 z-20 w-8 h-8 bg-black/60 backdrop-blur-sm rounded-full flex items-center justify-center opacity-80 hover:opacity-100 transition-all duration-300"
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+          >
+            {isMuted ? (
+              <VolumeX className="w-5 h-5 text-white" />
+            ) : (
+              <Volume2 className="w-5 h-5 text-white" />
+            )}
+          </button>
+
           {/* Start Your Journey Button - Positioned at bottom left */}
           <div className="absolute bottom-8 left-6 z-20">
             <button className="bg-orange-500 text-white px-6 py-3 text-lg font-semibold hover:bg-orange-600 transition-colors animate-fadeInUp animation-delay-400 shadow-lg">
