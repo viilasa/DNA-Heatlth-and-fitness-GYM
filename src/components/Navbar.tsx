@@ -15,18 +15,18 @@ const Navbar = () => {
     { to: "/gym", label: "OUR GYM" },
     { to: "/success-stories", label: "SUCCESS STORIES" },
     { to: "/about", label: "ABOUT ME" },
-    { to: "/supplements"}
+    { to: "/supplements", label: "SUPPLEMENTS" }
   ];
 
   return (
     <nav className="fixed w-full z-50 bg-black/90 text-white">
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center">
             <img 
               src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739374295/1logo_Abhi_tqfmuu.png" 
               alt="Abhijit Fitness Logo" 
-              className="h-20 w-auto"
+              className="h-12 md:h-20 w-auto"
             />
           </Link>
           
@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className="hover:text-orange-500 transition-colors"
+                className="hover:text-orange-500 transition-colors text-sm lg:text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
@@ -75,7 +75,7 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className="text-white hover:text-orange-500 transition-colors py-2"
+              className="text-white hover:text-orange-500 transition-colors py-2 text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
