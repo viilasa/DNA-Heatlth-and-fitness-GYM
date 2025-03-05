@@ -143,19 +143,6 @@ const Hero: React.FC = () => {
           </div>
         ))}
 
-        {/* Mute Button - Only visible on desktop */}
-        <button
-          onClick={toggleMute}
-          className="absolute bottom-8 left-8 z-20 w-10 h-10 bg-black/60 backdrop-blur-sm rounded-full flex items-center justify-center opacity-80 hover:opacity-100 transition-all duration-300"
-          aria-label={isMuted ? "Unmute audio" : "Mute audio"}
-        >
-          {isMuted ? (
-            <VolumeX className="w-6 h-6 text-white" />
-          ) : (
-            <Volume2 className="w-6 h-6 text-white" />
-          )}
-        </button>
-
         <SlideButton direction="left" onClick={prevSlide} />
         <SlideButton direction="right" onClick={nextSlide} />
         <SlideIndicators
