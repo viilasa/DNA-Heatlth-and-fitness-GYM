@@ -15,7 +15,6 @@ const Navbar = () => {
     { to: "/gym", label: "OUR GYM" },
     { to: "/success-stories", label: "SUCCESS STORIES" },
     { to: "/about", label: "ABOUT ME" },
-    { to: "/supplements", label: "SUPPLEMENTS" }
   ];
 
   return (
