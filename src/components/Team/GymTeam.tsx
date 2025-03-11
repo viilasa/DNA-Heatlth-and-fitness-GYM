@@ -32,8 +32,8 @@ const GymTeam: React.FC = () => {
       }
     },
     {
-      image: "https://images.unsplash.com/photo-1571732154690-f6d1c3e5178a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "dt. Richa Shet Talaunlikar",
+      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1741717197/1_phqkbv.svg?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Mitch dunphy",
       role: "Nutrition Specialist",
       expertise: [
         "Diet Planning",
@@ -47,7 +47,7 @@ const GymTeam: React.FC = () => {
       }
     },
     {
-      image: "https://images.unsplash.com/photo-1619361794061-d050a4f1c8a2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1741717592/2_oib0qw.png?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Rahul Kumar",
       role: "CrossFit Coach",
       expertise: [
@@ -63,7 +63,7 @@ const GymTeam: React.FC = () => {
       }
     },
     {
-      image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1741717592/3_merjue.png?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Priya Shah",
       role: "Yoga Instructor",
       expertise: [
