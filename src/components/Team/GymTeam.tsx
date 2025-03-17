@@ -47,7 +47,7 @@ const GymTeam: React.FC = () => {
       }
     },
      {
-      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1742225199/Untitled_design_6_esqqcr.png?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1742225397/Untitled_design_5_ahlazv.png?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "CLaire dunphy",
       role: "Nutrition Specialist",
       expertise: [
