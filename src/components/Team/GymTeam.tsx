@@ -8,8 +8,8 @@ interface TeamMember {
   expertise: string[];
   social: {
     instagram?: string;
-    facebook?: string;
-    twitter?: string;
+   
+
   };
 }
 
@@ -27,8 +27,8 @@ const GymTeam: React.FC = () => {
       ],
       social: {
         instagram: "https://instagram.com/fitnesswithabhijit07",
-        facebook: "#",
-        twitter: "#"
+        
+        
       }
     },
     {
@@ -43,7 +43,7 @@ const GymTeam: React.FC = () => {
       ],
       social: {
         instagram: "#",
-        facebook: "#"
+       
       }
     },
      {
@@ -58,7 +58,7 @@ const GymTeam: React.FC = () => {
       ],
       social: {
         instagram: "https://www.instagram.com/analisajaine/",
-        facebook: "#"
+      
       }
     },
     {
@@ -73,8 +73,7 @@ const GymTeam: React.FC = () => {
       ],
       social: {
         instagram: "#",
-        facebook: "#",
-        twitter: "#"
+        
       }
     },
     {
@@ -89,7 +88,7 @@ const GymTeam: React.FC = () => {
       ],
       social: {
         instagram: "https://www.instagram.com/relvia_02/",
-        facebook: "#"
+        
       }
       },
       
@@ -105,7 +104,7 @@ const GymTeam: React.FC = () => {
       ],
       social: {
         instagram: "#",
-        facebook: "#"
+       
       }
     }
   ];
