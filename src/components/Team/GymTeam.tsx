@@ -82,10 +82,10 @@ const GymTeam: React.FC = () => {
       name: "Relvia Sheena Fernandes",
       role: "Yoga Instructor",
       expertise: [
-        "Hatha Yoga",
-        "Meditation",
-        "Flexibility Training",
-        "Mind-Body Balance"
+        "Strength and Conditioning ",
+        "Weight/ Fat loss ",
+        "Nutrition",
+        "HIIT"
       ],
       social: {
         instagram: "#",
