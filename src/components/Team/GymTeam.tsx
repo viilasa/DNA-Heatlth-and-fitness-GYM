@@ -63,16 +63,18 @@ const GymTeam: React.FC = () => {
     },
     {
       image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1741717592/2_oib0qw.png?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Rahul Kumar",
+      name: "Alex Flavio Colaco",
       role: "CrossFit Coach",
       expertise: [
-        "CrossFit Training",
-        "Olympic Lifting",
-        "HIIT Workouts",
-        "Group Classes"
+        "Weight Loss and Management",
+        "Nutrition and Meal Planning",
+        "Injury Rehabilitation and Prevention",
+        "Senior Citizen Fitness and Wellness",
+        "Explosive Power Training",
+        "Strength and Endurance Athlete Training"
       ],
       social: {
-        instagram: "#",
+        instagram: "https://www.instagram.com/thealexxc/",
         
       }
     },
