@@ -47,8 +47,8 @@ const GymTeam: React.FC = () => {
       }
     },
      {
-      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1742225397/Untitled_design_5_ahlazv.png?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "CLaire dunphy",
+      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1742389690/4_dlbzc9.png?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Ana",
       role: "Nutrition Specialist",
       expertise: [
         "Diet Planning",
@@ -80,6 +80,20 @@ const GymTeam: React.FC = () => {
     {
       image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1741717592/3_merjue.png?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Priya Shah",
+      role: "Yoga Instructor",
+      expertise: [
+        "Hatha Yoga",
+        "Meditation",
+        "Flexibility Training",
+        "Mind-Body Balance"
+      ],
+      social: {
+        instagram: "#",
+        facebook: "#"
+      }
+      {
+      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1742389689/5_abe15l.png?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Valanco",
       role: "Yoga Instructor",
       expertise: [
         "Hatha Yoga",
