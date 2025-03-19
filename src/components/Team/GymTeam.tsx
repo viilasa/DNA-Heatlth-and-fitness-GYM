@@ -51,10 +51,10 @@ const GymTeam: React.FC = () => {
       name: "Analisajaine Fernandes",
       role: "Nutrition Specialist",
       expertise: [
-        "Diet Planning",
-        "Nutrition Counseling",
-        "Weight Management",
-        "Sports Nutrition"
+        "Fitness Training",
+        "Strengthening and Muscle Conditioning Techniques",
+        "High-Intensity Interval Training (HIIT)",
+        "Basic Nutrition Guidance for Weight Management and Overall Health"
       ],
       social: {
         instagram: "#",
@@ -79,7 +79,7 @@ const GymTeam: React.FC = () => {
     },
     {
       image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1741717592/3_merjue.png?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Priya Shah",
+      name: "Relvia Sheena Fernandes",
       role: "Yoga Instructor",
       expertise: [
         "Hatha Yoga",
@@ -98,10 +98,10 @@ const GymTeam: React.FC = () => {
       name: "Valanco Tereza",
       role: "Yoga Instructor",
       expertise: [
-        "Hatha Yoga",
-        "Meditation",
-        "Flexibility Training",
-        "Mind-Body Balance"
+        "Strength Training and Conditioning",
+        "CrossFit Methodologies and Programming",
+        "High-Intensity Interval Training (HIIT) "
+       
       ],
       social: {
         instagram: "#",
