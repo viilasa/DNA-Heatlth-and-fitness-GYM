@@ -57,7 +57,7 @@ const GymTeam: React.FC = () => {
         "Basic Nutrition Guidance for Weight Management and Overall Health"
       ],
       social: {
-        instagram: "#",
+        instagram: "https://www.instagram.com/analisajaine/",
         facebook: "#"
       }
     },
@@ -88,7 +88,7 @@ const GymTeam: React.FC = () => {
         "HIIT"
       ],
       social: {
-        instagram: "#",
+        instagram: "https://www.instagram.com/relvia_02/",
         facebook: "#"
       }
       },
