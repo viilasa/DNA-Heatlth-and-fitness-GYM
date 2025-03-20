@@ -33,13 +33,14 @@ const GymTeam: React.FC = () => {
     },
     {
       image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1741717197/1_phqkbv.svg?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "Mitch dunphy",
+      name: "Vijay Shankar Kumar Prasad",
       role: "Fitness Trainer",
       expertise: [
-        "Diet Planning",
-        "Nutrition Counseling",
-        "Weight Management",
-        "Sports Nutrition"
+        "POSTURAL AND FITNESS ASSESSMENT",
+        " MEAL PLANNING",
+        "MUSCLE STRENGTHING AND CONDITIONING ",
+        "HIIT TRAINING",
+        "NJURY IDENTIFICATION AND REHAB  ( ACUTE/MINOR)"
       ],
       social: {
         instagram: "#",
