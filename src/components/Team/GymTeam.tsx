@@ -36,11 +36,11 @@ const GymTeam: React.FC = () => {
       name: "Vijay Shankar Kumar Prasad",
       role: "Fitness Trainer",
       expertise: [
-        "POSTURAL AND FITNESS ASSESSMENT",
-        " MEAL PLANNING",
-        "MUSCLE STRENGTHING AND CONDITIONING ",
-        "HIIT TRAINING",
-        "INJURY IDENTIFICATION AND REHAB  ( ACUTE/MINOR)"
+        "Postural and Fitness Assessment",
+        " Meal Planning",
+        "Muscle Strengthening and Conditioning ",
+        "HIIT Training",
+        "Injury Identification and Rehab (acute/minor)"
       ],
       social: {
         instagram: "https://www.instagram.com/_vijay_prasad_001/",
