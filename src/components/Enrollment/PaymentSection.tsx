@@ -6,7 +6,7 @@ interface PaymentSectionProps {
 }
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
-  const upiId = "test02@oksbi";
+  const upiId = "alkeshnaik606-1@okhdfcbank";
   const qrCodeUrl = "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739826406/Scan_the_code_kalv8o.png"; // Replace with actual QR code URL
   const phoneNumber = "+917798032404";
   
@@ -17,7 +17,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
   };
 
   const handleUpiRedirect = () => {
-    const upiUrl = `upi://pay?pa=suryanature02@oksbi&pn=SuryaNature&cu=INR`;
+    const upiUrl = `upi://pay?pa=alkeshnaik606-1@okhdfcbank&pn=alkeshnaik&cu=INR`;
     window.location.href = upiUrl;
   };
 
