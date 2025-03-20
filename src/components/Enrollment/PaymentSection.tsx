@@ -7,7 +7,7 @@ interface PaymentSectionProps {
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({ onBack }) => {
   const upiId = "alkeshnaik606-1@okhdfcbank";
-  const qrCodeUrl = "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739826406/Scan_the_code_kalv8o.png"; // Replace with actual QR code URL
+  const qrCodeUrl = "https://res.cloudinary.com/ddhhlkyut/image/upload/v1742454524/qrcode_hbkmzj.jpg"; // Replace with actual QR code URL
   const phoneNumber = "+917798032404";
   
 
