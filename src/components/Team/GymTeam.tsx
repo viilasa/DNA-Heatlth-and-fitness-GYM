@@ -43,7 +43,7 @@ const GymTeam: React.FC = () => {
         "INJURY IDENTIFICATION AND REHAB  ( ACUTE/MINOR)"
       ],
       social: {
-        instagram: "#",
+        instagram: "https://www.instagram.com/_vijay_prasad_001/",
        
       }
     },
