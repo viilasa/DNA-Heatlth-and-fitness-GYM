@@ -40,7 +40,7 @@ const GymTeam: React.FC = () => {
         " MEAL PLANNING",
         "MUSCLE STRENGTHING AND CONDITIONING ",
         "HIIT TRAINING",
-        "NJURY IDENTIFICATION AND REHAB  ( ACUTE/MINOR)"
+        "INJURY IDENTIFICATION AND REHAB  ( ACUTE/MINOR)"
       ],
       social: {
         instagram: "#",
