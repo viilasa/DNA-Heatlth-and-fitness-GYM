@@ -161,7 +161,7 @@ const SuccessStoriesPage: React.FC<SuccessStoriesPageProps> = ({ format = 'simpl
 // Simple Card Component
 const SimpleCard = ({ story }: { story: SuccessStory }) => (
   <div className="group bg-zinc-900 rounded-lg overflow-hidden transition-all hover:shadow-2xl h-full flex flex-col">
-    <div className="relative aspect-square overflow-hidden">
+    <div className="relative h-64 md:h-80 overflow-hidden">
       <img 
         src={story.afterImage} 
         alt={story.name}
