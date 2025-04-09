@@ -1,7 +1,7 @@
 import React from 'react';
 import { Award, Users, Clock, Medal, Globe } from 'lucide-react';
 import useCountUp from '../hooks/useCountUp';
-/import CertificationSection from '../components/About/CertificationSection';
+//import CertificationSection from '../components/About/CertificationSection';
 
 const AboutPage: React.FC = () => {
   const [isVisible, setIsVisible] = React.useState(false);
