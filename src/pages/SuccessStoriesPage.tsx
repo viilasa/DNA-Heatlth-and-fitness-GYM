@@ -167,6 +167,12 @@ const SimpleCard = ({ story }: { story: SuccessStory }) => (
         alt={story.name}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
+      {/* Watermark Overlay */}
+        <img 
+          src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739374295/1logo_Abhi_tqfmuu.png" // <-- Replace with your watermark logo path
+          alt="Watermark"
+          className="absolute bottom-2 right-2 w-16 opacity-60 pointer-events-none"
+        />
     </div>
     <div className="p-4 md:p-6 flex flex-col gap-2 flex-1">
       <h3 className="text-lg md:text-xl font-bold text-white">{story.name}</h3>
