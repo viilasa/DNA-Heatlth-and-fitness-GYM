@@ -98,8 +98,20 @@
     "testimonial": "Pushing through the tough days made the results even sweeter!",
     "rating": 5
   },
+
   {
     "id": "10",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739910673/21_baxr2s.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "11",
     "name": "Amy Diaz",
     "age": 23,
     "duration": "4 months",
@@ -107,6 +119,138 @@
     "beforeImage": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61",
     "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739824862/4_xdpmax.png",
     "testimonial": "A truly transformative experience—I feel like a new person!",
+    "rating": 5
+  },
+  {
+    "id": "12",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739910674/22_iwognw.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "13",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739910674/19_luq4js.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "14",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739910675/25_qr7yem.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "15",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739910690/29_iaq11r.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "16",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739910690/23_vylzqc.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "17",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739910690/20_vfxlg4.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  }
+  {
+    "id": "18",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739828185/Scan_the_code_z4rgd0.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "19",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739828185/Scan_the_code_z4rgd0.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "20",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739828185/Scan_the_code_z4rgd0.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "21",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739828185/Scan_the_code_z4rgd0.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "22",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739828185/Scan_the_code_z4rgd0.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
+    "rating": 5
+  },
+  {
+    "id": "23",
+    "name": "Terry Crews",
+    "age": 23,
+    "duration": "4 months",
+    "weightLoss": "8 KG",
+    "beforeImage": "",
+    "afterImage": "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739828185/Scan_the_code_z4rgd0.png",
+    "testimonial": "Pushing through the tough days made the results even sweeter!",
     "rating": 5
   }
 ]
