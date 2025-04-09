@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       title: "Supplement and Nutrition",
       description: "Premium fitness gear and supplements",
       icon: <ShoppingBag className="w-8 h-8 md:w-12 md:h-12" />,
-      image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df",
+      image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1739446459/photo-6364_zjtyp3.jpg",
       link: "/supplements"
     }
   ];
