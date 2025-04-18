@@ -160,7 +160,7 @@ const GymPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://resiliencerxpt.com/wp-content/uploads/2022/07/CrossFit.jpg"
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1744971293/Untitled_design_5_sc2hqy.png"
                 alt="CrossFit Training"
                 className="rounded-lg shadow-xl"
               />
