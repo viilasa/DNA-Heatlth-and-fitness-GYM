@@ -145,7 +145,7 @@ const GymPage: React.FC = () => {
         {/* Background Logo */}
         <div className="absolute inset-0 pointer-events-none">
           <img 
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1744971932/Untitled_design_6_lwe1nv.png"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1740478053/30days_ntuivv.png"
             alt="30 Days Challenge Logo"
             className="absolute w-full md:w-2/3 lg:w-1/2 h-auto opacity-10 right-0 top-1/2 -translate-y-1/2 object-contain"
           />
@@ -160,7 +160,7 @@ const GymPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1744971293/Untitled_design_5_sc2hqy.png"
+                src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1744971932/Untitled_design_6_lwe1nv.png"
                 alt="CrossFit Training"
                 className="rounded-lg shadow-xl"
               />
