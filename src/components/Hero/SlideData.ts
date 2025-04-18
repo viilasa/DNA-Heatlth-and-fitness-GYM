@@ -8,7 +8,7 @@ export interface Slide {
 
 export const slides: Slide[] = [
   {
-    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1744970049/6_kgnp2f.svg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1744970489/hero2_carbrw.svg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     title: "30 DAY\nTRANSFORMATION",
     subtitle: "JOIN THE CHALLENGE",
     description: "Transform your body and mind with my signature 30-day fitness challenge. Get personalized workouts, nutrition plans, and daily motivation to achieve your goals.",
