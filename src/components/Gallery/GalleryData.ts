@@ -17,7 +17,7 @@ export const galleryData: GalleryItem[] = [
     title: "Weight Training"
   },
   {
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a",
+    image: "https://res.cloudinary.com/ddhhlkyut/image/upload/v1744970050/5_vg13wl.svg",
     title: "Functional Area"
   }
 ];
