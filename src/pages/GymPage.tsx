@@ -75,7 +75,7 @@ const GymPage: React.FC = () => {
         <div className="absolute inset-0">
           <div className="relative h-full w-full">
             <img 
-              src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2019_43/3066896/191023-crossfit-ac-1153p.jpg"
+              src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1744970489/hero2_carbrw.svg"
               alt="CrossFit Training"
               className="w-full h-full object-cover"
             />
