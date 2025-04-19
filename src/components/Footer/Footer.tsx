@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-400">+91 7972916974</span>
+                <span className="text-gray-400">7972916974</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-orange-500" />
@@ -59,8 +59,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Opening Hours</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400">Monday - Friday: <span className="text-white">6:00 AM to 12:00 PM - 3pm to 10 pm</span></li>
-              <li className="text-gray-400">Saturday: <span className="text-white">6:00 AM to 12:00 PM - 3pm to 10 pm<</span></li>
+              <li className="text-gray-400">Monday - Friday: <span className="text-white">6:00 AM - 12:00 PM  3pm - 10 pm</span></li>
+              <li className="text-gray-400">Saturday: <span className="text-white">6:00 AM - 12:00 PM  3pm - 10 pm<</span></li>
               <li className="text-gray-400">Sunday: <span className="text-white">Close</span></li>
             </ul>
           </div>
