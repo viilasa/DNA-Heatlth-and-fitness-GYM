@@ -19,7 +19,7 @@ const TimeTable: React.FC = () => {
               </span>
             </div>
             <p className="text-white font-medium mb-1">{session.workout}</p>
-            <p className="text-gray-400 text-sm">{session.trainer}</p>
+            
           </div>
         ))}
       </div>
