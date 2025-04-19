@@ -261,7 +261,7 @@ const GymPage: React.FC = () => {
             
             <WhatsAppCTA 
               
-              phoneNumber="919022701531" 
+              phoneNumber="917972916974" 
               message="Hello,  Please provide more detailsa about memberships."
               buttonText="Ask About Memberships" // Custom button text
               className="px-12"
