@@ -28,7 +28,7 @@ export const pricingPlans: PricingPlan[] = [
       { duration: "3 Months", regularPrice: 5400, salePrice: 4800 },
       { duration: "4 Months", regularPrice: 7200, salePrice: 6400 },
       { duration: "6 Months", regularPrice: 96000, salePrice: 8400 },
-      { duration: "Yearly", regularPrice: 15000, salePrice: 14000 }
+      { duration: "Yearly", regularPrice: 15000, salePrice: 13900 }
     ]
   },
   {
