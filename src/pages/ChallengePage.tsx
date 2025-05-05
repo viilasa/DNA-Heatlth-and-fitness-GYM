@@ -167,9 +167,9 @@ const ChallengePage: React.FC = () => {
             <div className="space-y-6">
               <div>
                 <p className="text-gray-300 mb-2">Instagram</p>
-                <a href="https://instagram.com/fitnesswithabhijit07" 
+                <a href="https://instagram.com/fitnesswithabhijit2" 
                    className="text-orange-500 font-semibold text-xl hover:text-orange-600 transition-colors">
-                  @fitnesswithabhijit07
+                  @fitnesswithabhijit2
                 </a>
               </div>
               <div>
