@@ -10,36 +10,36 @@ export const timeTableData: TimeTableSession[] = [
     day: "Monday",
     time: "9:00 PM",
     workout: "Upper Body Workouts",
-    trainer: "Abhijit Kumar"
+    trainer: "Abhijit Naik"
   },
   {
     day: "Tuesday",
     time: "9:00 PM",
     workout: "Lower Body Workouts",
-    trainer: "Abhijit Kumar"
+    trainer: "Abhijit Naik"
   },
   {
     day: "Wednesday",
     time: "9:00 PM",
     workout: "HIIT & Cardio",
-    trainer: "Abhijit Kumar"
+    trainer: "Abhijit Naik"
   },
   {
     day: "Thursday",
     time: "9:00 PM",
     workout: "Strength Training",
-    trainer: "Abhijit Kumar"
+    trainer: "Abhijit Maik"
   },
   {
     day: "Friday",
     time: "9:00 PM",
     workout: "TABATA/EMOM",
-    trainer: "Abhijit Kumar"
+    trainer: "Abhijit Naik"
   },
   {
     day: "Saturday",
-    time: "9:00 PM",
-    workout: "Combat Training",
-    trainer: "Abhijit Kumar"
+    time: "-",
+    workout: "Rest Day",
+    trainer: "Abhijit Naik"
   }
 ];
