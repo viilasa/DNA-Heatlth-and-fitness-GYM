@@ -51,10 +51,10 @@ const ChallengePage: React.FC = () => {
             </p>
             <div className="space-y-4">
               <div className="inline-block bg-orange-500/50 px-6 py-3 rounded-full text-white backdrop-blur-sm">
-                <span className="font-bold">Early Bird Special:</span> ₹999/- (till 12th May)
+                <span className="font-bold">Early Bird Special:</span> ₹999/- (till 30th June)
               </div>
               <div className="block">
-                <span className="text-gray-300 px-6 py-3">Regular Fee:</span> ₹1,499/- (after 12th May)
+                <span className="text-gray-300 px-6 py-3">Regular Fee:</span> ₹1,499/- (after 30th June)
               </div>
               <div className="block mt-8">
                 <button
@@ -169,7 +169,7 @@ const ChallengePage: React.FC = () => {
                 <p className="text-gray-300 mb-2">Instagram</p>
                 <a href="https://instagram.com/fitnesswithabhijit2" 
                    className="text-orange-500 font-semibold text-xl hover:text-orange-600 transition-colors">
-                  @fitnesswithabhijit2
+                  @fitnesswithabhijit3
                 </a>
               </div>
               <div>
