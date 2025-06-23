@@ -172,6 +172,7 @@ const ChallengePage: React.FC = () => {
                   @fitnesswithabhijit3
                 </a>
               </div>
+              
               <div>
                 <p className="text-gray-300 mb-2">Phone/WhatsApp</p>
                 <a href="tel:7798032404" 
@@ -179,6 +180,21 @@ const ChallengePage: React.FC = () => {
                   779 803 2404
                 </a>
               </div>
+              <div>
+                <p className="text-gray-300 mb-2">Account Name: ALKESH GOPI NAIK </p>
+                
+                <p className="text-gray-300 mb-2">Account Number </p>
+                <a href="" 
+                   className="text-orange-500 font-semibold text-xl hover:text-orange-600 transition-colors">
+                  5292101000679
+                </a>
+                <p className="text-gray-300 mb-2">Ifsc Code </p>
+                <a href="" 
+                   className="text-orange-500 font-semibold text-xl hover:text-orange-600 transition-colors">
+                  CNRB0005292
+                </a>
+              </div>
+              
               <div className="pt-8">
                 <p className="text-gray-400 italic">
                   Note: We'll verify your payment and grant you access to the program.
