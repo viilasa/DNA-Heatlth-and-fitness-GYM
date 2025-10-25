@@ -54,7 +54,7 @@ const ChallengePage: React.FC = () => {
                 <span className="font-bold">Early Bird Special:</span> ₹999/- (till 3rd Nov)
               </div>
               <div className="block">
-                <span className="text-gray-300 px-6 py-3">Regular Fee:</span> ₹1,499/- (after 3 rd Nov)
+                <span className="text-gray-300 px-6 py-3">Regular Fee:</span> ₹1,499/- (after 3rd Nov)
               </div>
               <div className="block mt-8">
                 <button
