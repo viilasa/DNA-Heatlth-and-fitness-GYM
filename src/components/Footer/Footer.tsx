@@ -78,4 +78,11 @@ const Footer = () => {
             >
               Viilasa
             </a>
-          </
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
