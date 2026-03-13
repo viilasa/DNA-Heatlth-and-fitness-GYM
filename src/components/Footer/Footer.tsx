@@ -64,22 +64,14 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-zinc-800 pt-8 space-y-2">
-          <p className="text-center text-gray-400">
-            © {new Date().getFullYear()} Abhijit Fitness. All rights reserved.
-          </p>
-          <p className="text-center text-gray-500 text-sm">
-            Made by{' '}
-            
-              href="https://surya.viilasa.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange-500 hover:text-orange-400 transition-colors"
-            >
-              Viilasa
-            </a>
-          </p>
-        </div>
+<div className="border-t border-zinc-800 pt-8 space-y-2">
+  <p className="text-center text-gray-400">
+    © {new Date().getFullYear()} Abhijit Fitness. All rights reserved.
+  </p>
+  <p className="text-center text-gray-500 text-sm">
+    Made by <a href="https://surya.viilasa.com/" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-400 transition-colors">Viilasa</a>
+  </p>
+</div>
       </div>
     </footer>
   );
