@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
           <div>
-          <img 
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739374295/1logo_Abhi_tqfmuu.png"
-            alt="Abhijit Fitness Logo" 
+            <img 
+              src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739374295/1logo_Abhi_tqfmuu.png"
+              alt="Abhijit Fitness Logo" 
             />
             <p className="text-gray-400 mb-6">
               Transform your life through fitness. Join our community and achieve your health and fitness goals with expert guidance.
@@ -23,7 +23,6 @@ const Footer = () => {
               <SocialLink Icon={Youtube} href="#" label="Youtube" />
             </div>
           </div>
-
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
@@ -35,7 +34,6 @@ const Footer = () => {
               <li><a href="#team" className="text-gray-400 hover:text-orange-500 transition-colors">Our Team</a></li>
             </ul>
           </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
@@ -54,27 +52,30 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           {/* Opening Hours */}
           <div>
             <h3 className="text-xl font-bold mb-4">Opening Hours</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400">Monday - Friday: <span className="text-white">6:00 AM - 12:00 PM & 3pm - 10 pm</span></li>
-              <li className="text-gray-400">Saturday: <span className="text-white">6:00 AM - 12:00 PM  & 3pm - 10 pm</span></li>
+              <li className="text-gray-400">Monday - Friday: <span className="text-white">6:00 AM - 12:00 PM & 3pm - 10 pm</span></li>
+              <li className="text-gray-400">Saturday: <span className="text-white">6:00 AM - 12:00 PM & 3pm - 10 pm</span></li>
               <li className="text-gray-400">Sunday: <span className="text-white">Close</span></li>
             </ul>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-zinc-800 pt-8">
+        <div className="border-t border-zinc-800 pt-8 space-y-2">
           <p className="text-center text-gray-400">
             © {new Date().getFullYear()} Abhijit Fitness. All rights reserved.
           </p>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+          <p className="text-center text-gray-500 text-sm">
+            Made by{' '}
+            
+              href="https://surya.viilasa.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-500 hover:text-orange-400 transition-colors"
+            >
+              Viilasa
+            </a>
+          </
