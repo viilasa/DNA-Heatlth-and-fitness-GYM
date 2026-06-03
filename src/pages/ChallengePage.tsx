@@ -169,7 +169,7 @@ const ChallengePage: React.FC = () => {
                 <p className="text-gray-300 mb-2">Instagram</p>
                 <a href="https://instagram.com/fitnesswithabhijit7" 
                    className="text-orange-500 font-semibold text-xl hover:text-orange-600 transition-colors">
-                  @fitnesswithabhijit03
+                  @fitnesswithabhijit2
                 </a>
               </div>
               
